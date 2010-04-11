@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<title>Positioning Demo - Raphael & jQuery</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+        <script src="http://github.com/DmitryBaranovskiy/raphael/blob/master/raphael.js?raw=true"></script>
+        <script src="positioning.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#positioning").rposdemo({
+						testItems: [['circle', 0, 0, 50], ['text', 0, 0, 'Text'], ['rect', 0, 0, 50, 50]]
+				});
+            });
+        </script>
+	</head>
+	<body>
+	    <div id="positioning">
+	    </div>
+	</body>
+</html>

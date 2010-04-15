@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>Blinky Example - Ext Core</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/ext-core/3.0.0/ext-core-debug.js"></script>
+        <script src="blinky.extcore.js"></script>
+        <script>
+            Ext.onReady(function(){
+				new Ext.ux.Blinky('blinky', {
+                    color: '#00ff00',
+                    duration: 1
+                });
+            });
+        </script>
+        <style>
+            .pagecontainer {
+                border: dashed 1px #c0c0c0;
+                margin: 10px;
+            }
+            .item {
+                margin: 0 10px;
+            }
+        </style>
+	</head>
+	<body>
+	    <div id="blinky" class="pagecontainer">
+	        <div class="item">
+	            <p>Sam</p>
+	        </div>
+	        <div class="item">
+	            <p>Henry</p>
+	        </div>
+	        <div class="item">
+	            <p>Edward</p>
+	        </div>
+	        <div class="item">
+	            <p>Allan</p>
+	        </div>
+	    </div>
+	</body>
+</html>

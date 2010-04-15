@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>Event Comparison</title>
+        <script src="ext-core.js"></script>
+        <script>
+        	Contacts = function(contacts){
+				this.addEvents('contactinfo');
+			};
+        	Ext.extend(Contacts, Ext.util.Observable);
+            Ext.onReady(function(){
+				var contacts = new Contacts();
+			    contacts.on("contactinfo", function(contactName){
+			        Ext.select(".contact-details").update(contactName);
+			    });
+			    Ext.select(".contacts").on('click', function (e) {
+				    contacts.fireEvent("contactinfo", [e.target.innerHTML]);
+			    });
+            });
+        </script>
+	</head>
+	<body>
+	    <table>
+	        <tr class="contacts">
+	            <td>Sam</td>
+	        </tr>
+	        <tr class="contacts">
+	            <td>Henry</td>
+	        </tr>
+	        <tr class="contacts">
+	            <td>Ethan</td>
+	        </tr>
+	        <tr class="contacts">
+	            <td>Andrew</td>
+	        </tr>
+	    </table>
+		<div class="contact-details"></div>
+	</body>
+</html>

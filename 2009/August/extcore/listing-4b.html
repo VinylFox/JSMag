@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Event Comparison</title>
+        <script src="ext-core.js"></script>
+        <script>
+            Ext.onReady(function(){
+				Ext.select('.contacts').click(function(e){
+					Ext.fly(this).fadeOut();
+				});
+            })
+        </script>
+	</head>
+	<body>
+	    <table>
+	        <tr class="contacts">
+	            <td>Sam</td>
+	        </tr>
+	        <tr class="contacts">
+	            <td>Henry</td>
+	        </tr>
+	        <tr class="contacts">
+	            <td>Ethan</td>
+	        </tr>
+	        <tr class="contacts">
+	            <td>Andrew</td>
+	        </tr>
+	    </table>
+	</body>
+</html>

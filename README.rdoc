@@ -1,0 +1,10 @@
+== {JSMag}[http://www.jsmag.com]
+
+Code examples used in articles written for JSMag.
+
+Currently, these issues have accompanying code samples:
+
+* {2010 May}[http://github.com/VinylFox/JSMag/tree/master/2010/May/] - Using the Raphaël library to create vector graphics.
+* {2010 February}[http://github.com/VinylFox/JSMag/tree/master/2010/February/] - {Plugging in to JavaScript.}[http://www.jsmag.com/main.issues.description/id=29/]
+* {2009 September}[http://github.com/VinylFox/JSMag/tree/master/2009/September/] - {Beginners Corner: Inline Documentation.}[http://www.jsmag.com/main.issues.description/id=24/]
+* {2009 August}[http://github.com/VinylFox/JSMag/tree/master/2009/August/] - {Events, the Marco-Polo of JavaScript.}[http://www.jsmag.com/main.issues.description/id=23/]

@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Path Drawing Demo - Raphael & jQuery</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+        <script src="http://github.com/DmitryBaranovskiy/raphael/blob/master/raphael.js?raw=true"></script>
+        <script src="pathdraw.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#pathdraw").pathdraw({
+						target: 'path'
+				});
+            });
+        </script>
+	</head>
+	<body>
+	    <div id="pathdraw">
+	    </div><br/>
+        <input type="text" style="width:490px;" id="path"/>
+        <input type="button" value="Close" style="width:75px;" id="pathclose">
+        <input type="button" value="Reset" style="width:75px;" id="pathreset">
+	</body>
+</html>

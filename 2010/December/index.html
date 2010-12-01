@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>Foo Mobile</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="address=no"/>
+    <link type="text/css" rel="stylesheet" href="sencha-touch.css">
+    <script type="application/javascript" src="sencha-touch.js"></script>
+    <script type="application/javascript">
+    Ext.regApplication({
+        name: 'Foo',
+        phoneStartupScreen: 'phone_startup.png',
+        icon: 'icon.png',
+        launch: function(){
+            new Ext.Panel({
+                layout: 'fit',
+                fullscreen: true,
+                dockedItems: [{
+                    xtype: "toolbar",
+                    dock: "top",
+                    title: 'Foo Code Mobile'
+                }],
+                items: [{
+                    xtype: 'list',
+                    itemTpl: '{text}',
+                    store: Foo.stores.Foos
+                }]
+            });
+        }
+    });
+    
+    Ext.regModel('Foos', {
+        fields: ['id','text']
+    });
+    
+    Foo.stores.Foos = new Ext.data.Store({
+        model: 'Foos',
+        proxy: {
+            type: 'scripttag',
+            url: 'http://search.twitter.com/search.json',
+            extraParams: {
+              q: 'code+foo'
+            },
+            reader: {
+                root: 'results'
+            }
+        },
+        autoLoad: true
+    });
+    </script>
+	</head>
+	<body>
+	</body>
+</html>
